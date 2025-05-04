@@ -1,0 +1,16 @@
+import { expect } from 'chai';
+import { convertedFunction } from '../../../src/converters/procedures';
+
+describe('Converted PostgreSQL Function: procedure_name', () => {
+    it('should return expected result for valid input', () => {
+        const result = convertedFunction(validInput);
+        expect(result).to.deep.equal(expectedOutput);
+    });
+
+    it('should handle NULL input correctly', () => {
+        const result = convertedFunction(nullInput);
+        expect(result).to.deep.equal(expectedNullOutput);
+    });
+
+    // Add more test cases as needed
+});

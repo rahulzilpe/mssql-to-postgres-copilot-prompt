@@ -1,0 +1,33 @@
+{
+  "name": "mssql-to-postgres-prompt-library",
+  "version": "1.0.0",
+  "description": "A library for converting SQL Server stored procedures and functions to PostgreSQL.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mssql-to-postgres-prompt-library.git"
+  },
+  "keywords": [
+    "SQL Server",
+    "PostgreSQL",
+    "conversion",
+    "database"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "jest": "^27.0.6",
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.3.0"
+  }
+}

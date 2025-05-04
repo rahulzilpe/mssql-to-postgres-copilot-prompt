@@ -9,25 +9,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/mssql-to-postgres-prompt-library.git"
+    "url": "https://github.com/rahulzilpe/mssql-to-postgres-prompt-library.git"
   },
   "keywords": [
     "SQL Server",
     "PostgreSQL",
     "conversion",
-    "database"
+    "database",
+    "github-copilot",
+    "prompts"
   ],
-  "author": "Your Name",
+  "author": "Rahul Zilpe",
   "license": "MIT",
   "dependencies": {
     "pg": "^8.7.1"
   },
   "devDependencies": {
-    "typescript": "^4.5.4",
-    "jest": "^27.0.6",
     "@types/jest": "^27.0.2",
+    "@types/lodash": "^4.17.16",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
-    "eslint": "^8.3.0"
+    "eslint": "^8.3.0",
+    "jest": "^27.0.6",
+    "typescript": "^4.5.4"
   }
 }

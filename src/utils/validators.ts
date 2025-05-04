@@ -1,5 +1,31 @@
 import { isString, isNumber } from 'lodash';
 
+/**
+ * Validates if the input is a SQL query string
+ */
+export function isSqlQuery(input: any): boolean {
+  return isString(input) && input.trim().length > 0;
+}
+
+/**
+ * Validates if the string is a valid SQL Server stored procedure name
+ */
+export function isValidProcedureName(name: any): boolean {
+  if (!isString(name)) return false;
+  return /^[a-zA-Z_][a-zA-Z0-9_@#$]*(\.[a-zA-Z_][a-zA-Z0-9_@#$]*)?$/.test(name);
+}
+
+/**
+ * Validates conversion parameters
+ */
+export function validateConversionParams(sql: any, options?: any): void {
+  if (!isSqlQuery(sql)) {
+    throw new Error("Invalid SQL input");
+  }
+  
+  // Add more validation as needed
+}
+
 export function validateDataType(data: any, expectedType: string): boolean {
     switch (expectedType) {
         case 'string':

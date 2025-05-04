@@ -1,8 +1,18 @@
 import { CustomError } from './custom-error';
 
-export function handleConversionError(error: Error): void {
-    console.error('Conversion Error:', error.message);
-    // Additional logging or error handling logic can be added here
+/**
+ * Handles errors during conversion
+ */
+export function handleConversionError(error: any): CustomError {
+  if (error instanceof CustomError) {
+    return error;
+  }
+  
+  return new CustomError(
+    `Error during SQL conversion: ${error.message || 'Unknown error'}`,
+    'CONVERSION_ERROR',
+    { originalError: error }
+  );
 }
 
 export function handleValidationError(error: Error): void {

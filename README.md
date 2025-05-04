@@ -58,7 +58,7 @@ Add this to your VS Code settings.json:
 {
   "github.copilot.advanced": {
     "repositories": [
-      "https://github.com/rahulzilpe/mssql-to-postgres-prompt-library"
+      "https://github.com/rahulzilpe/mssql-to-postgres-copilot-prompt"
     ]
   }
 }

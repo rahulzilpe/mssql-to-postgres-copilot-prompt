@@ -1,0 +1,39 @@
+{
+  "commands": [
+    {
+      "name": "convert-sql-to-pg",
+      "description": "Convert SQL Server code to PostgreSQL",
+      "prompt": "Convert the following SQL Server code to PostgreSQL according to the comprehensive conversion rules in this workspace:\n\n```sql\n{{arguments}}\n```\n\nProvide only the converted PostgreSQL code in a code block without explanations."
+    },
+    {
+      "name": "sql-to-pg",
+      "description": "Short alias for SQL Server to PostgreSQL conversion",
+      "prompt": "Convert the following SQL Server code to PostgreSQL according to the comprehensive conversion rules in this workspace:\n\n```sql\n{{arguments}}\n```\n\nProvide only the converted PostgreSQL code without explanations."
+    },
+    {
+      "name": "explain-conversion",
+      "description": "Convert SQL Server to PostgreSQL and explain the changes",
+      "prompt": "Convert the following SQL Server code to PostgreSQL according to the comprehensive conversion rules in this workspace:\n\n```sql\n{{arguments}}\n```\n\nProvide the converted PostgreSQL code in a code block and explain each major change made during the conversion, focusing on:\n1. Function signature transformation\n2. Parameter changes\n3. Data type conversions\n4. Control flow modifications\n5. Any special handling required"
+    },
+    {
+      "name": "analyze-sql",
+      "description": "Analyze SQL Server code for conversion challenges",
+      "prompt": "Analyze this SQL Server code for potential challenges when converting to PostgreSQL:\n\n```sql\n{{arguments}}\n```\n\nIdentify and explain:\n1. Any syntax that will require special handling\n2. SQL Server features with no direct PostgreSQL equivalent\n3. Potential performance considerations in the converted code\n4. Recommended approach for conversion"
+    },
+    {
+      "name": "convert-pivot",
+      "description": "Convert SQL Server PIVOT to PostgreSQL crosstab",
+      "prompt": "Convert this SQL Server PIVOT operation to PostgreSQL using the crosstab function:\n\n```sql\n{{arguments}}\n```\n\nFollow these specific rules:\n1. Add CREATE EXTENSION IF NOT EXISTS tablefunc; at the beginning\n2. Structure the crosstab query with row identifiers, categories, and aggregated values\n3. Provide proper column type definitions in the result\n4. Return only the converted PostgreSQL code"
+    },
+    {
+      "name": "convert-returns",
+      "description": "Convert SQL Server procedure with OUTPUT parameters to PostgreSQL",
+      "prompt": "Convert this SQL Server procedure with OUTPUT parameter(s) to a PostgreSQL function with proper return handling:\n\n```sql\n{{arguments}}\n```\n\nFollow these specific rules:\n1. Use INOUT parameters for OUTPUT parameters\n2. For multiple return values, create a RETURNS record or RETURNS TABLE function\n3. Use proper PostgreSQL syntax for parameter definitions\n4. Return the converted PostgreSQL code with proper return value handling"
+    },
+    {
+      "name": "convert-temp-tables",
+      "description": "Convert SQL Server procedure with temporary tables to PostgreSQL",
+      "prompt": "Convert this SQL Server procedure using temporary tables to a PostgreSQL function:\n\n```sql\n{{arguments}}\n```\n\nFollow these specific rules:\n1. Replace #temp tables with CREATE TEMPORARY TABLE ... ON COMMIT DROP\n2. Replace table variables with temporary tables\n3. Remove SQL Server-specific table options\n4. Maintain proper transaction context\n5. Return only the converted PostgreSQL code"
+    }
+  ]
+}

@@ -46,6 +46,24 @@ import { convertDataType, convertFunction, convertProcedure } from './src/conver
 
 Refer to the documentation in the `docs` directory for detailed guidelines on usage and examples.
 
+## GitHub Copilot Integration
+
+This library is designed to work seamlessly with GitHub Copilot. To use it with Copilot:
+
+### Option 1: Reference via GitHub Repository
+
+Add this to your VS Code settings.json:
+
+```json
+{
+  "github.copilot.advanced": {
+    "repositories": [
+      "https://github.com/rahulzilpe/mssql-to-postgres-prompt-library"
+    ]
+  }
+}
+```
+
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
